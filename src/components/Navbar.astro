@@ -1,0 +1,35 @@
+---
+const isSignedIn = true; // TODO: IMPLEMENT THIS LATER
+---
+
+<nav class="bg-[#1e1e2e] text-[#cdd6f4] border-b-2 border-[#cba6f7]">
+    <div class="container mx-auto flex justify-between items-center px-4 py-6">
+        <a href="/" class="text-2xl font-bold">🚀 launch.dev</a>
+        <ul class="flex space-x-4">
+            <li><a href="/" class="hover:text-white">Home</a></li>
+            <li><a href="/about" class="hover:text-white">About</a></li>
+            {
+                isSignedIn ? (
+                    <>
+                        <li>
+                            <a href="/plan" class="hover:text-white">
+                                My Plan
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/logout" class="hover:text-white">
+                                Log Out
+                            </a>
+                        </li>
+                    </>
+                ) : (
+                    <li>
+                        <a href="/signin" class="hover:text-white">
+                            Sign In
+                        </a>
+                    </li>
+                )
+            }
+        </ul>
+    </div>
+</nav>

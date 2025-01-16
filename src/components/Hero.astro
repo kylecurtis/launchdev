@@ -1,0 +1,52 @@
+---
+import { Code } from "astro:components";
+
+const CodeBlock = `package main
+
+import "fmt"
+
+type User struct {
+    Name    string
+    Email   string
+    Courses []string
+}
+
+func main() {
+    fmt.Println("Start learning now!")
+}`;
+---
+
+<section class="bg-transparent py-[120px]">
+    <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center">
+        <!-- LEFT SECTION (TEXT/BUTTON) -->
+        <div class="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
+            <h1
+                class="text-center lg:text-left text-5xl font-bold mb-4 text-[#cdd6f4]"
+            >
+                🚀 launch.dev
+            </h1>
+            <p class="text-center lg:text-left text-xl text-[#cdd6f4] mb-6">
+                Launch your career to new heights by learning a new programming
+                language!
+            </p>
+            <a
+                href="/signup"
+                class="px-6 py-3 bg-[#a6e3a1] text-[#11111b] hover:bg-[#11111b] hover:text-[#a6e3a1] rounded-md shadow-md hover:border-[#a6e3a1] border-2 border-[#11111b]"
+            >
+                All Systems Go!
+            </a>
+        </div>
+
+        <!-- RIGHT SECTION (CODE BLOCK) -->
+        <div
+            class="w-full lg:w-1/2 text-white rounded-xl p-0 mt-8 lg:mt-0 lg:ml-8"
+        >
+            <Code
+                code={CodeBlock}
+                lang="go"
+                theme="catppuccin-mocha"
+                style="padding: 10px; border-radius: 20px;"
+            />
+        </div>
+    </div>
+</section>

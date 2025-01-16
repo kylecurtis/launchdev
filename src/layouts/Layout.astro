@@ -1,22 +1,42 @@
+---
+import Footer from "../components/Footer.astro";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <!-- HEAD CONTENT -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>launch.dev</title>
+    </head>
+    <body class="bg-[#11111b] text-[#cdd6f4]">
+        <slot />
+        <Footer />
+    </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<!-- GLOBAL STYLES -->
+<style is:global>
+    html {
+        scroll-behavior: smooth;
+    }
+    /* GLOBAL BODY */
+    body {
+        margin: 0;
+        width: 100%;
+        background-size: 42px 42px;
+    }
+    /* DARK THEME (DEFAULT) */
+    /* -- Might add light theme later */
+    body {
+        background-image: linear-gradient(
+                to right,
+                #14141e 2px,
+                transparent 1px
+            ),
+            linear-gradient(to bottom, #14141e 2px, transparent 1px);
+    }
 </style>
