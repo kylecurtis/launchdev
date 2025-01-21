@@ -1,0 +1,22 @@
+---
+import { Icon } from "astro-icon/components";
+
+export interface Props {
+    icon: string;
+    name: string;
+}
+
+const { icon, name } = Astro.props;
+---
+
+<div
+    class="flex flex-col items-center justify-between bg-[#1e1e2e] text-[#cdd6f4] p-4 rounded-lg"
+>
+    <!-- ICON SLOT -->
+    <div class="flex items-center justify-center h-20 w-20 mb-4 text-[#89dceb]">
+        <Icon name={icon} class="h-full w-full" />
+    </div>
+
+    <!-- NAME SLOT -->
+    <p class="text-center text-lg font-semibold">{name}</p>
+</div>
