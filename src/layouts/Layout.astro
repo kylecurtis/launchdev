@@ -1,5 +1,6 @@
 ---
 import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <!doctype html>
@@ -13,6 +14,7 @@ import Footer from "../components/Footer.astro";
         <title>launch.dev</title>
     </head>
     <body class="bg-[#11111b] text-[#cdd6f4]">
+        <Navbar />
         <slot />
         <Footer />
     </body>
@@ -22,6 +24,12 @@ import Footer from "../components/Footer.astro";
 <style is:global>
     html {
         scroll-behavior: smooth;
+        box-sizing: border-box;
+    }
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
     }
     /* GLOBAL BODY */
     body {
