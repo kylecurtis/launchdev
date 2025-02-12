@@ -1,6 +1,6 @@
 ---
 import Footer from "../components/Footer.astro";
-import Navbar from "../components/Navbar.astro";
+import Navbar from "../components/Navbar";
 ---
 
 <!doctype html>
@@ -14,7 +14,7 @@ import Navbar from "../components/Navbar.astro";
         <title>launch.dev</title>
     </head>
     <body class="bg-[#11111b] text-[#cdd6f4]">
-        <Navbar />
+        <Navbar client:load />
         <slot />
         <Footer />
     </body>
