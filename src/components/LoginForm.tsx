@@ -18,6 +18,7 @@ export default function LoginForm() {
 
             if (res.ok) {
                 localStorage.setItem("loggedIn", "true");
+                localStorage.setItem("userEmail", email);
                 window.location.href = "/";
             } else {
                 alert("Login failed! Check your credentials.");

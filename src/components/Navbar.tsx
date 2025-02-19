@@ -33,8 +33,8 @@ export default function Navbar() {
                     {isSignedIn ? (
                         <>
                             <li>
-                                <a href="/plan" className="hover:text-white">
-                                    My Plan
+                                <a href="/account" className="hover:text-white">
+                                    My Account
                                 </a>
                             </li>
                             <li>
