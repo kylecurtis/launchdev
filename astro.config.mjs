@@ -13,5 +13,6 @@ export default defineConfig({
     output: 'server',
   integrations: [react(), tailwind(), icon(), starlight({
     title: "Launch.dev",
+    description: "Learn a new programming language!",
   })]
 });
