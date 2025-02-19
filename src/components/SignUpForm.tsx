@@ -3,16 +3,18 @@ import React, { useState } from "react";
 export default function SignUpForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [name, setName] = useState(""); // <-- NEW state for name
+    const [name, setName] = useState("");
 
     async function handleSignUp(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
 
+        // Form data
         const formData = new FormData();
         formData.append("email", email);
         formData.append("password", password);
-        formData.append("name", name); // <-- append name to formData
+        formData.append("name", name);
 
+        // Fetch POST
         const res = await fetch("/api/signup", {
             method: "POST",
             body: formData,
@@ -33,7 +35,7 @@ export default function SignUpForm() {
             </h2>
 
             <form onSubmit={handleSignUp} className="space-y-6">
-                {/* Name input */}
+                {/* Name */}
                 <div>
                     <label
                         htmlFor="signupName"
@@ -51,7 +53,7 @@ export default function SignUpForm() {
                     />
                 </div>
 
-                {/* Email input */}
+                {/* Email */}
                 <div>
                     <label
                         htmlFor="signupEmail"
@@ -69,7 +71,7 @@ export default function SignUpForm() {
                     />
                 </div>
 
-                {/* Password input */}
+                {/* Password */}
                 <div>
                     <label
                         htmlFor="signupPassword"
