@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface User {
     id: number;
@@ -190,8 +190,8 @@ export default function AccountPage() {
 
             {/* PLAN SELECT */}
             {showPlanModal && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60">
-                    <div className="bg-[#1e1e2e] p-6 rounded-md w-[300px] text-[#cdd6f4] border border-[#cba6f7]">
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90">
+                    <div className="bg-[#1e1e2e] p-6 rounded-md w-[500px] text-[#cdd6f4] border border-[#cba6f7]">
                         <h3 className="text-xl font-semibold mb-4">
                             Choose your plan
                         </h3>
@@ -236,7 +236,7 @@ export default function AccountPage() {
 
             {/* CART MODAL */}
             {showCartModal && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60">
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90">
                     <div className="bg-[#1e1e2e] p-6 rounded-md w-[400px] text-[#cdd6f4] border border-[#cba6f7]">
                         <h3 className="text-xl font-semibold mb-4">
                             Your Cart
